@@ -3,39 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Banka Giriş Ekranı</title>
-    <meta name="description" content="Modern ve özgün banka giriş ekranı tasarımı." />
-    <script type="module" src="/main.js"></script>
+    <meta name="theme-color" content="#f4f7fc" />
+    <meta name="description" content="MaviKare Banka dijital bankacılık giriş ekranı." />
+    <title>Güvenli Giriş | MaviKare Banka</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./main.js"></script>
   </head>
   <body>
-    <div class="app-shell">
-      <main class="login-card" aria-labelledby="page-title">
-        <section class="brand-panel">
-          <div class="brand-badge">B</div>
-          <h1 id="page-title">Banka Girişi</h1>
-          <p>Güvenli, hızlı ve sade bir giriş deneyimi.</p>
-        </section>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="MaviKare Banka ana sayfa">
+        <span class="brand-mark" aria-hidden="true">m</span>
+        <span>MAVİKARE <strong>BANKA</strong></span>
+      </a>
+      <nav class="header-actions" aria-label="Yardım ve güvenlik">
+        <a href="#guvenlik">Güvenlik</a>
+        <a class="help-link" href="mailto:destek@mavikare.example">Yardım</a>
+      </nav>
+    </header>
 
-        <section class="form-panel">
-          <form class="login-form">
+    <main class="page-content">
+      <section class="welcome-panel" aria-labelledby="welcome-title">
+        <div class="eyebrow"><span class="status-dot"></span> DİJİTAL BANKACILIK</div>
+        <h1 id="welcome-title">Bankacılık,<br /><span>size yakın.</span></h1>
+        <p class="welcome-copy">Günlük bankacılık işlemlerinizi güvenle ve kolayca yönetin. Size özel dijital dünyanıza giriş yapın.</p>
+        <div class="welcome-note" id="guvenlik">
+          <span class="shield-icon" aria-hidden="true">✓</span>
+          <span><strong>Güvenli demo</strong><br />Bu arayüz gerçek bankacılık işlemi yapmaz.</span>
+        </div>
+        <div class="orb orb-one" aria-hidden="true"></div>
+        <div class="orb orb-two" aria-hidden="true"></div>
+      </section>
+
+      <section class="login-card" aria-labelledby="login-title">
+        <div class="card-heading">
+          <p class="card-kicker">HOŞ GELDİNİZ</p>
+          <h2 id="login-title">Hesabınıza giriş yapın</h2>
+          <p>Devam etmek için bilgilerinizi girin.</p>
+        </div>
+        <form class="login-form" action="#" method="get">
+          <div class="field">
             <label for="customerId">Müşteri No / TCKN</label>
-            <input id="customerId" name="customerId" type="text" placeholder="Örn. 12345678901" autocomplete="username" />
-
+            <input id="customerId" type="text" inputmode="numeric" autocomplete="username" placeholder="Müşteri numaranız veya TCKN" />
+          </div>
+          <div class="field">
             <label for="password">Şifre</label>
-            <input id="password" name="password" type="password" placeholder="Şifrenizi girin" autocomplete="current-password" />
+            <input id="password" type="password" autocomplete="current-password" placeholder="Şifrenizi girin" />
+          </div>
+          <div class="form-options">
+            <label class="remember-option">
+              <input type="checkbox" />
+              <span class="custom-checkbox" aria-hidden="true"></span>
+              <span>Beni hatırla</span>
+            </label>
+            <a class="forgot-link" href="mailto:destek@mavikare.example?subject=%C5%9Eifre%20yard%C4%B1m%C4%B1">Şifremi unuttum</a>
+          </div>
+          <button class="login-button" type="submit">Giriş Yap <span aria-hidden="true">→</span></button>
+          <p class="form-message" aria-live="polite"></p>
+        </form>
+        <div class="card-footer"><span class="lock-icon" aria-hidden="true">▣</span> Gerçek müşteri bilgilerinizi girmeyin</div>
+      </section>
+    </main>
 
-            <div class="form-row">
-              <label class="checkbox">
-                <input type="checkbox" />
-                <span>Beni hatırla</span>
-              </label>
-              <a href="#" class="forgot-link">Şifremi unuttum</a>
-            </div>
-
-            <button type="submit" class="primary-btn">Giriş Yap</button>
-          </form>
-        </section>
-      </main>
-    </div>
+    <footer class="site-footer">
+      <span>© 2026 MaviKare Banka · Demo arayüz</span>
+      <span>Bu örnek bir tasarımdır; gerçek bankacılık hizmeti sunmaz.</span>
+    </footer>
   </body>
 </html>
