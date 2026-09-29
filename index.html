@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banka Giriş Ekranı</title>
+    <meta name="description" content="Modern ve özgün banka giriş ekranı tasarımı." />
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <main class="login-card" aria-labelledby="page-title">
+        <section class="brand-panel">
+          <div class="brand-badge">B</div>
+          <h1 id="page-title">Banka Girişi</h1>
+          <p>Güvenli, hızlı ve sade bir giriş deneyimi.</p>
+        </section>
+
+        <section class="form-panel">
+          <form class="login-form">
+            <label for="customerId">Müşteri No / TCKN</label>
+            <input id="customerId" name="customerId" type="text" placeholder="Örn. 12345678901" autocomplete="username" />
+
+            <label for="password">Şifre</label>
+            <input id="password" name="password" type="password" placeholder="Şifrenizi girin" autocomplete="current-password" />
+
+            <div class="form-row">
+              <label class="checkbox">
+                <input type="checkbox" />
+                <span>Beni hatırla</span>
+              </label>
+              <a href="#" class="forgot-link">Şifremi unuttum</a>
+            </div>
+
+            <button type="submit" class="primary-btn">Giriş Yap</button>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
