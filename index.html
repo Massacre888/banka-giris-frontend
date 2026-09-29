@@ -3,39 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Banka Giriş Ekranı</title>
-    <meta name="description" content="Modern ve özgün banka giriş ekranı tasarımı." />
-    <script type="module" src="/main.js"></script>
+    <meta name="theme-color" content="#f3f7fc" />
+    <title>Mavi Banka | Güvenli Giriş</title>
+    <meta name="description" content="Mavi Banka internet şubesine güvenli giriş." />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./main.js"></script>
   </head>
   <body>
-    <div class="app-shell">
-      <main class="login-card" aria-labelledby="page-title">
-        <section class="brand-panel">
-          <div class="brand-badge">B</div>
-          <h1 id="page-title">Banka Girişi</h1>
-          <p>Güvenli, hızlı ve sade bir giriş deneyimi.</p>
-        </section>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Mavi Banka ana sayfa">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="brand-name">mavi<span>bank</span></span>
+      </a>
+      <div class="topbar-note">
+        <span class="secure-icon" aria-hidden="true">✓</span>
+        Güvenli İnternet Şubesi
+      </div>
+    </header>
 
-        <section class="form-panel">
-          <form class="login-form">
+    <main class="page-content">
+      <section class="welcome-panel" aria-labelledby="welcome-title">
+        <p class="eyebrow">DİJİTAL BANKACILIK</p>
+        <h1 id="welcome-title">Bankacılık<br />hep yanında.</h1>
+        <p class="welcome-copy">İşlemlerini güvenle yönet, hayatına kaldığın yerden devam et.</p>
+        <div class="welcome-decoration" aria-hidden="true">
+          <span class="orbit orbit-one"></span>
+          <span class="orbit orbit-two"></span>
+          <span class="decoration-dot"></span>
+        </div>
+        <p class="welcome-footnote">Basit. Güvenli. Sana özel.</p>
+      </section>
+
+      <section class="login-card" aria-labelledby="login-title">
+        <div class="card-heading">
+          <p class="eyebrow">İNTERNET ŞUBESİ</p>
+          <h2 id="login-title">Hoş geldiniz</h2>
+          <p>Devam etmek için bilgilerinizi girin.</p>
+        </div>
+
+        <form class="login-form">
+          <div class="field">
             <label for="customerId">Müşteri No / TCKN</label>
-            <input id="customerId" name="customerId" type="text" placeholder="Örn. 12345678901" autocomplete="username" />
+            <input
+              id="customerId"
+              name="customerId"
+              type="text"
+              placeholder="Müşteri numaranız veya TCKN"
+              autocomplete="username"
+              inputmode="numeric"
+              required
+            />
+          </div>
 
+          <div class="field">
             <label for="password">Şifre</label>
-            <input id="password" name="password" type="password" placeholder="Şifrenizi girin" autocomplete="current-password" />
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Şifrenizi girin"
+              autocomplete="current-password"
+              required
+            />
+          </div>
 
-            <div class="form-row">
-              <label class="checkbox">
-                <input type="checkbox" />
-                <span>Beni hatırla</span>
-              </label>
-              <a href="#" class="forgot-link">Şifremi unuttum</a>
-            </div>
+          <div class="form-options">
+            <label class="remember-option" for="remember">
+              <input id="remember" name="remember" type="checkbox" />
+              <span>Beni hatırla</span>
+            </label>
+            <a class="forgot-link" href="#yardim">Şifremi unuttum</a>
+          </div>
 
-            <button type="submit" class="primary-btn">Giriş Yap</button>
-          </form>
-        </section>
-      </main>
-    </div>
+          <button class="primary-button" type="button">
+            Giriş Yap <span aria-hidden="true">→</span>
+          </button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="security-note">
+          <span class="lock-icon" aria-hidden="true">●</span>
+          Bilgileriniz güvenli bağlantı ile korunur.
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer" id="yardim">
+      <span>© 2026 Mavi Banka · Örnek arayüz</span>
+      <span>Şifre ve müşteri bilgilerinizi kimseyle paylaşmayın.</span>
+    </footer>
   </body>
 </html>
