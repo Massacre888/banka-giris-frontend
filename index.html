@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="MaviRota Finans için hazırlanmış özgün, duyarlı banka giriş ekranı demosu."
+    />
+    <meta name="theme-color" content="#f4f7f6" />
+    <title>Güvenli Giriş | MaviRota Finans</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">İçeriğe geç</a>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="./" aria-label="MaviRota Finans ana sayfa">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <path d="M7 26.5 17.8 9l5 8.2 4.1-5.1L34 26.5H7Z" fill="currentColor" />
+              <path d="M9 30h22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <circle cx="29.5" cy="9.5" r="3.5" fill="#D7F36A" />
+            </svg>
+          </span>
+          <span class="brand-name">mavirota<span>finans</span></span>
+        </a>
+        <a class="help-link" href="#yardim" id="help-link">
+          <span class="help-icon" aria-hidden="true">?</span>
+          Yardım
+        </a>
+      </header>
+
+      <main class="main-layout" id="main-content">
+        <section class="login-panel" aria-labelledby="login-title">
+          <div class="eyebrow"><span></span> DİJİTAL BANKACILIK</div>
+          <h1 id="login-title">İyi günler,<br />hesabınıza hoş geldiniz.</h1>
+          <p class="intro">Devam etmek için müşteri bilgilerinizi girin.</p>
+
+          <form id="login-form">
+            <div class="form-field">
+              <label for="customer-id">Müşteri No / TCKN</label>
+              <input
+                id="customer-id"
+                name="customer-id"
+                type="text"
+                placeholder="Müşteri numaranızı girin"
+                autocomplete="username"
+                inputmode="numeric"
+                maxlength="50"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="password">Şifre</label>
+              <div class="password-input">
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  placeholder="Şifrenizi girin"
+                  autocomplete="current-password"
+                  required
+                />
+                <button
+                  class="password-toggle"
+                  id="password-toggle"
+                  type="button"
+                  aria-label="Şifreyi göster"
+                  aria-pressed="false"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z" />
+                    <circle cx="12" cy="12" r="2.7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="form-options">
+              <label class="remember-option" for="remember">
+                <input id="remember" name="remember" type="checkbox" />
+                <span class="custom-checkbox" aria-hidden="true"></span>
+                Beni hatırla
+              </label>
+              <a href="#sifre-yardim" id="forgot-link">Şifremi unuttum</a>
+            </div>
+
+            <button class="submit-button" type="submit">
+              Giriş Yap
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M4 10h11m-4-4 4 4-4 4" />
+              </svg>
+            </button>
+            <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="security-note">
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M10 2.5 16 5v4.7c0 3.8-2.6 6.3-6 7.8-3.4-1.5-6-4-6-7.8V5l6-2.5Z" />
+              <path d="m7.5 9.8 1.7 1.7 3.4-3.7" />
+            </svg>
+            <span>Bilgileriniz bu demo üzerinde hiçbir yere gönderilmez.</span>
+          </div>
+        </section>
+
+        <aside class="welcome-panel" aria-label="MaviRota Finans hakkında">
+          <div class="panel-orbit orbit-one"></div>
+          <div class="panel-orbit orbit-two"></div>
+          <div class="panel-content">
+            <div class="panel-topline">
+              <span class="live-dot"></span>
+              HER AN, HER YERDE YANINIZDA
+            </div>
+            <div class="route-art" aria-hidden="true">
+              <div class="route-sun"></div>
+              <svg viewBox="0 0 360 210" fill="none">
+                <path class="route-path" d="M25 164c58-2 62-91 120-91 43 0 45 74 91 74 34 0 41-55 99-55" />
+                <circle class="route-point" cx="25" cy="164" r="7" />
+                <circle class="route-point route-point-end" cx="335" cy="92" r="7" />
+                <path class="mountain mountain-back" d="m51 159 57-73 45 54 34-44 63 69H51Z" />
+                <path class="mountain mountain-front" d="m151 166 56-79 61 79h-117Z" />
+              </svg>
+              <span class="art-label label-start">BUGÜN</span>
+              <span class="art-label label-end">YARIN</span>
+            </div>
+            <p class="panel-kicker">Geleceğinize giden yol</p>
+            <h2>Her adımda<br />yanınızda.</h2>
+            <p class="panel-description">
+              Finansal yolculuğunuzda sade, güvenli ve size özel bir deneyim.
+            </p>
+            <div class="panel-footer">
+              <span class="footer-line"></span>
+              <span>Birlikte daha ileri.</span>
+            </div>
+          </div>
+          <span class="panel-index" aria-hidden="true">01 / 03</span>
+        </aside>
+      </main>
+
+      <footer class="site-footer">
+        <span>© 2026 MaviRota Finans · Eğitim amaçlı arayüz demosu</span>
+        <div class="footer-links">
+          <a href="#guvenlik" id="security-link">Güvenlik</a>
+          <a href="#gizlilik" id="privacy-link">Gizlilik</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
