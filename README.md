@@ -1,29 +1,29 @@
-# Banka Giriş Frontend
+# MaviKare Banka Giriş Arayüzü
 
-Modern, responsive ve özgün bir banka giriş ekranı tasarımı.
+Mobil uyumlu, özgün bir Türkçe bankacılık giriş ekranı demosu. Statik sayfa içeriği JavaScript çalışmasa da görüntülenir; herhangi bir bankacılık hizmetine veya gerçek giriş sistemine bağlanmaz.
 
-## Çalıştırma
+## Yerelde çalıştırma ve önizleme
+
+Node.js 20 veya üzeri gerekir.
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Build
+Vite'ın terminalde gösterdiği yerel adresi (genellikle `http://localhost:5173/`) tarayıcıda açın. Yayın derlemesini yerelde kontrol etmek için:
 
 ```bash
 npm run build
+npm run preview
 ```
 
-## GitHub Pages ile yayınlama
+Önizleme adresi genellikle `http://localhost:4173/` olur.
 
-1. Repo ayarlarına girin.
-2. **Settings > Pages** bölümünü açın.
-3. **Build and deployment** altında kaynak olarak **GitHub Actions** veya **Deploy from branch** seçin.
-4. Eğer branch tabanlı yayın yapıyorsanız `main` branch ve `/root` klasörünü seçin.
-5. Yayınlandıktan sonra site şu formatta açılır:
-   `https://Massacre888.github.io/banka-giris-frontend/`
+## GitHub Pages'de yayınlama
 
-## Not
+`.github/workflows/deploy-pages.yml`, `main` dalına her push yapıldığında bağımlılıkları kurar, siteyi derler, `dist` çıktısını artifact olarak yükler ve GitHub Pages'e dağıtır. Elle başlatmak için GitHub deposunda **Actions > Deploy to GitHub Pages > Run workflow** yolunu izleyin.
 
-Bu proje, gerçek bir bankanın arayüzünü birebir kopyalamaz; okul projesi için hazırlanmış özgün bir örnektir.
+İlk dağıtımdan önce depoda **Settings > Pages > Build and deployment > Source** ayarını **GitHub Actions** olarak seçin. Ardından **Actions** sekmesinden `Deploy to GitHub Pages` çalışmasının tamamlanmasını bekleyin.
+
+Canlı site adresi: <https://Massacre888.github.io/banka-giris-frontend/>
