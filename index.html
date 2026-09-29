@@ -3,39 +3,127 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Banka Giriş Ekranı</title>
-    <meta name="description" content="Modern ve özgün banka giriş ekranı tasarımı." />
-    <script type="module" src="/main.js"></script>
+    <meta
+      name="description"
+      content="Güvenli ve kolay dijital bankacılık deneyimi."
+    />
+    <meta name="theme-color" content="#f3f7fc" />
+    <title>Mavi Finans | Dijital Bankacılık</title>
+    <script type="module" src="./main.js"></script>
   </head>
   <body>
+    <a class="skip-link" href="#login">Giriş formuna geç</a>
     <div class="app-shell">
-      <main class="login-card" aria-labelledby="page-title">
-        <section class="brand-panel">
-          <div class="brand-badge">B</div>
-          <h1 id="page-title">Banka Girişi</h1>
-          <p>Güvenli, hızlı ve sade bir giriş deneyimi.</p>
+      <header class="site-header">
+        <a class="brand" href="./" aria-label="Mavi Finans ana sayfa">
+          <span class="brand-mark" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+          <span class="brand-name">mavi<span>finans</span></span>
+        </a>
+        <nav class="header-nav" aria-label="Ana gezinme">
+          <a href="#login">Bireysel</a>
+          <a href="#support">Yardım merkezi</a>
+          <span class="secure-label">
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M10 2.5 16 5v4.4c0 4-2.6 6.8-6 8.1-3.4-1.3-6-4.1-6-8.1V5l6-2.5Z" />
+              <path d="m7.4 9.8 1.7 1.7 3.6-3.7" />
+            </svg>
+            Güvenli bankacılık
+          </span>
+        </nav>
+      </header>
+
+      <main class="main-content">
+        <section class="welcome-panel" aria-labelledby="welcome-title">
+          <p class="eyebrow"><span></span> BANKACILIK, SİZİN RİTMİNİZDE</p>
+          <h1 id="welcome-title">Finansal hayatınız<br />hep <span>elinizin altında.</span></h1>
+          <p class="welcome-copy">
+            Günlük bankacılık işlemlerinizi güvenle ve kolayca yönetin.
+            İhtiyacınız olan her şey, tek bir yerde.
+          </p>
+          <div class="welcome-art" aria-hidden="true">
+            <div class="art-orbit orbit-one"></div>
+            <div class="art-orbit orbit-two"></div>
+            <div class="art-card">
+              <div class="art-card-top">
+                <span class="art-chip"></span>
+                <span class="art-contactless">)))</span>
+              </div>
+              <div class="art-card-number">•••• &nbsp; •••• &nbsp; •••• &nbsp; 2048</div>
+              <div class="art-card-bottom">
+                <span>MAVİ FİNANS</span>
+                <span class="art-card-logo"><i></i><i></i></span>
+              </div>
+            </div>
+            <div class="art-glow"></div>
+          </div>
+          <div class="trust-note">
+            <span class="trust-icon" aria-hidden="true">✓</span>
+            <span><strong>Güvenliğiniz önceliğimiz.</strong><br />Bilgileriniz korumalı bağlantı ile iletilir.</span>
+          </div>
         </section>
 
-        <section class="form-panel">
+        <section class="login-card" id="login" aria-labelledby="login-title">
+          <div class="card-heading">
+            <p class="card-kicker">DİJİTAL ŞUBE</p>
+            <h2 id="login-title">Tekrar hoş geldiniz</h2>
+            <p>Devam etmek için bilgilerinizi girin.</p>
+          </div>
           <form class="login-form">
-            <label for="customerId">Müşteri No / TCKN</label>
-            <input id="customerId" name="customerId" type="text" placeholder="Örn. 12345678901" autocomplete="username" />
-
-            <label for="password">Şifre</label>
-            <input id="password" name="password" type="password" placeholder="Şifrenizi girin" autocomplete="current-password" />
-
-            <div class="form-row">
-              <label class="checkbox">
-                <input type="checkbox" />
-                <span>Beni hatırla</span>
-              </label>
-              <a href="#" class="forgot-link">Şifremi unuttum</a>
+            <div class="field">
+              <label for="customerId">Müşteri No / TCKN</label>
+              <input
+                id="customerId"
+                name="customerId"
+                type="text"
+                placeholder="Müşteri numaranız veya TCKN"
+                autocomplete="username"
+                required
+              />
             </div>
-
-            <button type="submit" class="primary-btn">Giriş Yap</button>
+            <div class="field">
+              <label for="password">Şifre</label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="Şifrenizi girin"
+                autocomplete="current-password"
+                required
+              />
+            </div>
+            <div class="form-options">
+              <label class="remember-option" for="remember">
+                <input id="remember" name="remember" type="checkbox" />
+                <span class="custom-checkbox" aria-hidden="true"></span>
+                Beni hatırla
+              </label>
+              <a class="forgot-link" href="#support">Şifremi unuttum</a>
+            </div>
+            <button class="primary-btn" type="submit">
+              Giriş Yap
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M4 10h11M10 5l5 5-5 5" />
+              </svg>
+            </button>
+            <p class="form-status" role="status" aria-live="polite"></p>
           </form>
+          <div class="card-security">
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <rect x="4.5" y="8.5" width="11" height="8" rx="1.5" />
+              <path d="M7 8.5V6a3 3 0 0 1 6 0v2.5M10 11.5v2" />
+            </svg>
+            <span>Güvenli bağlantı ile korunuyorsunuz</span>
+          </div>
         </section>
       </main>
+
+      <footer class="site-footer" id="support">
+        <span>© 2026 Mavi Finans · Örnek arayüz</span>
+        <a href="mailto:destek@mavifinans.example">Yardıma mı ihtiyacınız var?</a>
+        <span class="demo-note">Bu sayfa bir tasarım demosudur; gerçek bankacılık hizmeti sunmaz.</span>
+      </footer>
     </div>
   </body>
 </html>
