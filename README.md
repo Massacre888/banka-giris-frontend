@@ -1,8 +1,8 @@
-# Banka Giriş Frontend
+# Mavi Banka Giriş Arayüzü
 
-Modern, responsive ve özgün bir banka giriş ekranı tasarımı.
+GitHub Pages ile uyumlu, Türkçe ve responsive örnek banka giriş arayüzü. Bu proje gerçek bir bankaya bağlanmaz ve giriş bilgilerini göndermez.
 
-## Çalıştırma
+## Yerelde çalıştırma
 
 ```bash
 npm install
@@ -13,17 +13,16 @@ npm run dev
 
 ```bash
 npm run build
+npm run preview
 ```
 
-## GitHub Pages ile yayınlama
+## GitHub Pages
 
-1. Repo ayarlarına girin.
-2. **Settings > Pages** bölümünü açın.
-3. **Build and deployment** altında kaynak olarak **GitHub Actions** veya **Deploy from branch** seçin.
-4. Eğer branch tabanlı yayın yapıyorsanız `main` branch ve `/root` klasörünü seçin.
-5. Yayınlandıktan sonra site şu formatta açılır:
-   `https://Massacre888.github.io/banka-giris-frontend/`
+Vite, proje sitesi için `/banka-giris-frontend/` taban yolunu kullanır.
 
-## Not
+1. Repoda **Settings > Pages** bölümünü açın.
+2. **Deploy from a branch** seçin.
+3. Yayın kaynağı olarak `main` branch ve `/ (root)` klasörünü seçip kaydedin.
+4. Site `https://Massacre888.github.io/banka-giris-frontend/` adresinde açılır.
 
-Bu proje, gerçek bir bankanın arayüzünü birebir kopyalamaz; okul projesi için hazırlanmış özgün bir örnektir.
+Kök klasördeki HTML, CSS ve JavaScript göreli yollarla bağlandığından branch tabanlı yayın doğrudan çalışır. Vite build çıktısı `dist/` klasörüne yazılır; bunu yayınlamak için Pages kaynağını bir Actions iş akışına yönlendirmek gerekir.
